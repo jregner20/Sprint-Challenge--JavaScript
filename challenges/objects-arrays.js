@@ -108,10 +108,12 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
 
-graduates.filter(function(filt){
-
-})
-
+graduates.map(function(item){
+  if (item.university.includes('Uni')){
+    unisWithUni.push(item);
+  }
+  return unisWithUni;
+});
 console.log(unisWithUni);
 
 
@@ -131,7 +133,7 @@ const zooAnimals = [
   { animal_name: "Hawk-eagle, crowned", population: 10, scientific_name: "Spizaetus coronatus", state: "Florida" },
   { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
 ];
-
+console.log(zooAnimals);
 /* Request 1: .forEach()
 
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
